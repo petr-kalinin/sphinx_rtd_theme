@@ -112,7 +112,7 @@
       white-space: pre-wrap
 
   // These are the various note pullouts that sphinx applies
-  .note, .attention, .caution, .danger, .error, .hint, .important, .tip, .warning, .seealso, .admonition-todo, .admonition
+  .attention, .caution, .danger, .error, .hint, .important, .tip, .warning, .seealso, .admonition-todo, .admonition
     @extend .wy-alert
     // These block elements are unsuitable for having floating objects next
     // to them
@@ -121,13 +121,25 @@
       margin-bottom: 0
   .admonition-title
     @extend .wy-alert-title
+    // @extend .fa
+    // @extend .fa-exclamation-circle
+    &:before
+      margin-right: 4px
+  .task .admonition-title
+    @extend .wy-alert-title
     @extend .fa
-    @extend .fa-exclamation-circle
+    @extend .fa-question-circle
+    &:before
+      margin-right: 4px
+  .note .admonition-title
+    @extend .wy-alert-title
+    @extend .fa
+    @extend .fa-commenting
     &:before
       margin-right: 4px
   .note, .seealso
     @extend .wy-alert.wy-alert-info
-  .hint, .tip, .important
+  .hint, .tip, .important, .task
     @extend .wy-alert.wy-alert-success
   .error, .danger
     @extend .wy-alert.wy-alert-danger
