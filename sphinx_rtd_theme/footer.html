@@ -15,10 +15,10 @@
   <div role="contentinfo">
     <p>
     {%- if show_copyright %}
-      {%- if hasdoc('copyright') %}
-        {% set path = pathto('copyright') %}
+      {%- if hasdoc('intro/licensing') %}
+        {% set path = pathto('intro/licensing') %}
         {% set copyright = copyright|e %}
-        &copy; <a href="{{ path }}">{% trans %}Copyright{% endtrans %}</a> {{ copyright }}
+        &copy; {{ copyright }}, <a href="{{ path }}">{{ license }}</a>
       {%- else %}
         {% set copyright = copyright|e %}
         &copy; {% trans %}Copyright{% endtrans %} {{ copyright }}
