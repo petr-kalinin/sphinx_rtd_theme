@@ -29,13 +29,17 @@ html
 
 .wy-menu-vertical
   width: $nav-desktop-width
+  background: $nav-background-color
+  padding-bottom: $gutter / 2
+  padding-top: $gutter / 2
 
   header, p.caption
     color: $nav-caption
     height: $base-font-size * 2
     line-height: $base-font-size * 2
     padding: 0 $gutter
-    margin: $base-line-height / 2 0 0 0
+    //margin: $base-line-height / 2 0 0 0
+    margin: 0
     display: block
     font-weight: bold
     text-transform: uppercase
@@ -190,9 +194,9 @@ html
   display: block
   width: $nav-desktop-width
   padding: $gutter / 2
-  margin-bottom: $gutter / 2
+  //margin-bottom: $gutter / 2
   z-index: $z-index-popover
-  background-color: $nav-search-background-color
+  //background-color: $nav-search-background-color
   text-align: center
   color: $nav-search-color
   input[type=text]
@@ -214,7 +218,7 @@ html
     font-weight: bold
     display: inline-block
     padding: $base-line-height / 6 $base-line-height / 4
-    margin-bottom: $gutter / 2
+    // margin-bottom: $gutter / 2
     +font-smooth
     &:hover
       background: rgba(255,255,255,.1)
@@ -276,13 +280,14 @@ html
   top: 0
   bottom: 0
   left: 0
-  padding-bottom: 2em
+  //padding-bottom: 2em
   width: $nav-desktop-width
   overflow-x: hidden
   overflow-y: hidden
   min-height: 100%
   color: $menu-medium
-  background: $nav-background-color
+  //background: $nav-background-color
+  background-color: $nav-search-background-color
   z-index: $z-index-popover
 
 .wy-side-scroll
